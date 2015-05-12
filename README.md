@@ -9,7 +9,7 @@ The main function is
 function outim=wassersmooth(inim,hh0,bins,inim_id,sigge,wasserfcn,smoothfcn)
 
 which transforms the input image to fit the distribution given by hh0. Two
-functions needs to be provided by the user, 
+functions need to be provided by the user (example wrapper functions are given), 
 
 * wasserfcn that calculates the optimal transport using the Wasserstein metric
 * smoothfcn that anisotropically smooths the image
