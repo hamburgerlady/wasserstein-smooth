@@ -1,4 +1,16 @@
 function outim=wassersmooth(inim,hh0,bins,inim_id,sigge,wasserfcn,smoothfcn)
+% function outim=wassersmooth(inim,hh0,bins,inim_id,sigge,wasserfcn,smoothfcn)
+%
+% Wasserstein smoothing based on Magnus Oskarsson,
+% "Regularizing image intensity transformations using the Wasserstein
+% metric" in proc. SCIA 2015.
+% Changes distribution of inim to match hh0 using bins. 
+% inim_id contains index of inim in bins, (1..N) if length(bins)=N.
+% sigge is the standard deviation of the smoothing function smoothfcn
+% wasserfcn is the name of the function that calculates the optimal
+% transport using the Wasserstein metric. 
+% smoothfcn is the name of the function that does the smoothing of the
+% image.
 
 inim=double(inim);
 hh = hist(inim(:),bins);
